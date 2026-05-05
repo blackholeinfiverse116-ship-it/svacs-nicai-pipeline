@@ -1,0 +1,58 @@
+{
+  "trace_id": "cargo-1",
+
+  "perception_event": {
+    "trace_id": "cargo-1",
+    "vessel_type": "cargo",
+    "confidence_score": 0.6396,
+    "dominant_freq_hz": 98.0,
+    "anomaly_flag": false
+  },
+
+  "nicai_signal": {
+    "trace_id": "cargo-1",
+    "signal_id": "cargo-1",
+    "timestamp": "LIVE",
+    "value": 0.6396,
+    "asset_id": "cargo",
+    "feature_type": "acoustic",
+    "dataset_id": "svacs",
+    "signal_type": "acoustic_detection",
+    "source": "svacs",
+    "metadata": {
+      "dominant_freq_hz": 98.0,
+      "anomaly_flag": false
+    },
+    "state": "live",
+    "latitude": 0.0,
+    "longitude": 0.0
+  },
+
+  "validation": {
+    "trace_id": "cargo-1",
+    "signal_id": "cargo-1",
+    "status": "ALLOW",
+    "confidence_score": 0.6396,
+    "reason": "Valid signal"
+  },
+
+  "intelligence_event": {
+    "trace_id": "cargo-1",
+    "vessel_type": "cargo",
+    "confidence": 0.6396,
+    "risk_level": "MEDIUM",
+    "anomaly_flag": false,
+    "explanation": "Moderate confidence acoustic detection — medium risk",
+    "validation_status": "ALLOW"
+  },
+
+  "state_event": {
+    "trace_id": "cargo-1",
+    "vessel_type": "cargo",
+    "risk_level": "MEDIUM",
+    "state": "WARNING",
+    "anomaly_flag": false,
+    "timestamp": "2026-05-04T10:16:58.543984+00:00",
+    "short_label": "Watch"
+  }
+}
