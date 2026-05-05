@@ -1,0 +1,111 @@
+S C:\Users\Ankita prajapati\Downloads\svacs-demo-main\svacs-demo-main> Invoke-RestMethod http://127.0.0.1:8000/perception_log | ConvertTo-Json -Depth 5
+{
+    "count":  15,
+    "events":  [
+                   {
+                       "trace_id":  "9d6dc7d6-d915-4738-a3bf-f20c78f6780b",
+                       "vessel_type":  "cargo",
+                       "confidence_score":  0.6396,
+                       "dominant_freq_hz":  98.0,
+                       "anomaly_flag":  false
+                   },
+                   {
+                       "trace_id":  "ed2483a7-61e0-406a-ba96-e531e403691f",
+                       "vessel_type":  "cargo",
+                       "confidence_score":  0.6396,
+                       "dominant_freq_hz":  98.0,
+                       "anomaly_flag":  false
+                   },
+                   {
+                       "trace_id":  "92fac55b-5a9b-42b0-ae55-c7ecc70fdcf2",
+                       "vessel_type":  "cargo",
+                       "confidence_score":  0.6396,
+                       "dominant_freq_hz":  98.0,
+                       "anomaly_flag":  false
+                   },
+                   {
+                       "trace_id":  "60b833aa-e1b8-4f45-8294-b4b198f87cb7",
+                       "vessel_type":  "speedboat",
+                       "confidence_score":  0.3922,
+                       "dominant_freq_hz":  1127.0,
+                       "anomaly_flag":  false
+                   },
+                   {
+                       "trace_id":  "65cdb24d-dd21-4dd9-a958-c99cc2a9a5e5",
+                       "vessel_type":  "speedboat",
+                       "confidence_score":  0.3922,
+                       "dominant_freq_hz":  1127.0,
+                       "anomaly_flag":  false
+                   },
+                   {
+                       "trace_id":  "37737d08-9b07-4084-b7de-fc88380f60e7",
+                       "vessel_type":  "speedboat",
+                       "confidence_score":  0.3922,
+                       "dominant_freq_hz":  1127.0,
+                       "anomaly_flag":  false
+                   },
+                   {
+                       "trace_id":  "cc7f98e5-1f78-41c6-ac15-7f0f05904eb0",
+                       "vessel_type":  "unknown",
+                       "confidence_score":  0.2721,
+                       "dominant_freq_hz":  44.0,
+                       "anomaly_flag":  true
+                   },
+                   {
+                       "trace_id":  "7e060865-4ae8-4837-9437-7c5bb66c3c8f",
+                       "vessel_type":  "unknown",
+                       "confidence_score":  0.2721,
+                       "dominant_freq_hz":  44.0,
+                       "anomaly_flag":  true
+                   },
+                   {
+                       "trace_id":  "f4c8366b-29bf-4092-ad17-755edf941c3e",
+                       "vessel_type":  "unknown",
+                       "confidence_score":  0.2721,
+                       "dominant_freq_hz":  44.0,
+                       "anomaly_flag":  true
+                   },
+                   {
+                       "trace_id":  "7bf297c9-014c-4706-ab8b-1497453a5c2b",
+                       "vessel_type":  "unknown",
+                       "confidence_score":  0.0201,
+                       "dominant_freq_hz":  390.0,
+                       "anomaly_flag":  true
+                   },
+                   {
+                       "trace_id":  "aae6c973-841e-4671-af3e-cc7700d51c42",
+                       "vessel_type":  "unknown",
+                       "confidence_score":  0.0201,
+                       "dominant_freq_hz":  390.0,
+                       "anomaly_flag":  true
+                   },
+                   {
+                       "trace_id":  "16fc715a-bb1c-4529-8b87-c06137fe7de4",
+                       "vessel_type":  "unknown",
+                       "confidence_score":  0.0201,
+                       "dominant_freq_hz":  390.0,
+                       "anomaly_flag":  true
+                   },
+                   {
+                       "trace_id":  "0e33f5d8-22eb-4c00-ada5-97a1f260e221",
+                       "vessel_type":  "submarine",
+                       "confidence_score":  0.1734,
+                       "dominant_freq_hz":  36.0,
+                       "anomaly_flag":  true
+                   },
+                   {
+                       "trace_id":  "23059853-eb02-487c-aae3-d93d4af792c2",
+                       "vessel_type":  "submarine",
+                       "confidence_score":  0.1734,
+                       "dominant_freq_hz":  36.0,
+                       "anomaly_flag":  true
+                   },
+                   {
+                       "trace_id":  "93db2cb8-68cb-4a2f-8b79-24436f372746",
+                       "vessel_type":  "submarine",
+                       "confidence_score":  0.1734,
+                       "dominant_freq_hz":  36.0,
+                       "anomaly_flag":  true
+                   }
+               ]
+}
