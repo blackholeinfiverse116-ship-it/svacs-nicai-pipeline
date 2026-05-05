@@ -1,47 +1,47 @@
 [
   {
-    "trace_id": "cargo-1",
+    "trace_id": "25d3f7c3-ba2a-4bc9-af02-dc3446b03189",
     "vessel_type": "cargo",
     "risk_level": "MEDIUM",
     "state": "WARNING",
     "anomaly_flag": false,
-    "timestamp": "2026-05-04T10:16:58.543984+00:00",
+    "timestamp": "2026-05-05T07:52:38.395111+00:00",
     "short_label": "Watch"
   },
   {
-    "trace_id": "speedboat-1",
+    "trace_id": "756f9f06-f904-4315-99f1-5506f98c8868",
     "vessel_type": "speedboat",
     "risk_level": "HIGH",
     "state": "ALERT",
     "anomaly_flag": false,
-    "timestamp": "2026-05-04T10:17:00.393729+00:00",
+    "timestamp": "2026-05-05T07:52:39.897437+00:00",
     "short_label": "Concern"
   },
   {
-    "trace_id": "submarine-1",
+    "trace_id": "2466c4aa-fefe-433b-b97b-d39dd99f0568",
     "vessel_type": "submarine",
     "risk_level": "CRITICAL",
     "state": "CRITICAL",
     "anomaly_flag": true,
-    "timestamp": "2026-05-04T10:17:02.681181+00:00",
+    "timestamp": "2026-05-05T07:52:41.366566+00:00",
     "short_label": "Threat"
   },
   {
-    "trace_id": "low-1",
+    "trace_id": "fb381325-4292-4483-b66a-b55aa37a2fd2",
     "vessel_type": "unknown",
     "risk_level": "HIGH",
     "state": "ALERT",
     "anomaly_flag": false,
-    "timestamp": "2026-05-04T10:17:04.654938+00:00",
+    "timestamp": "2026-05-05T07:52:42.816648+00:00",
     "short_label": "Concern"
   },
   {
-    "trace_id": "anomaly-1",
+    "trace_id": "193f1e6c-d403-4bff-bbe4-9d4a7183d2ac",
     "vessel_type": "unknown",
     "risk_level": "CRITICAL",
     "state": "CRITICAL",
     "anomaly_flag": true,
-    "timestamp": "2026-05-04T10:17:06.522160+00:00",
+    "timestamp": "2026-05-05T07:52:44.253650+00:00",
     "short_label": "Threat"
   }
 ]
