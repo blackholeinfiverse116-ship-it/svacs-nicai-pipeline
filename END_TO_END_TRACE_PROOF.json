@@ -1,58 +1,137 @@
-{
-  "trace_id": "cargo-1",
-
-  "perception_event": {
-    "trace_id": "cargo-1",
-    "vessel_type": "cargo",
-    "confidence_score": 0.6396,
-    "dominant_freq_hz": 98.0,
-    "anomaly_flag": false
-  },
-
-  "nicai_signal": {
-    "trace_id": "cargo-1",
-    "signal_id": "cargo-1",
-    "timestamp": "LIVE",
-    "value": 0.6396,
-    "asset_id": "cargo",
-    "feature_type": "acoustic",
-    "dataset_id": "svacs",
-    "signal_type": "acoustic_detection",
-    "source": "svacs",
-    "metadata": {
+[
+  {
+    "trace_id": "25d3f7c3-ba2a-4bc9-af02-dc3446b03189",
+    "perception_event": {
+      "trace_id": "25d3f7c3-ba2a-4bc9-af02-dc3446b03189",
+      "vessel_type": "cargo",
+      "confidence_score": 0.6396,
       "dominant_freq_hz": 98.0,
       "anomaly_flag": false
     },
-    "state": "live",
-    "latitude": 0.0,
-    "longitude": 0.0
+    "validation": {
+      "status": "ALLOW"
+    },
+    "intelligence_event": {
+      "trace_id": "25d3f7c3-ba2a-4bc9-af02-dc3446b03189",
+      "vessel_type": "cargo",
+      "confidence": 0.6396,
+      "risk_level": "MEDIUM",
+      "validation_status": "ALLOW"
+    },
+    "state_event": {
+      "trace_id": "25d3f7c3-ba2a-4bc9-af02-dc3446b03189",
+      "vessel_type": "cargo",
+      "risk_level": "MEDIUM",
+      "state": "WARNING",
+      "anomaly_flag": false
+    }
   },
-
-  "validation": {
-    "trace_id": "cargo-1",
-    "signal_id": "cargo-1",
-    "status": "ALLOW",
-    "confidence_score": 0.6396,
-    "reason": "Valid signal"
+  {
+    "trace_id": "756f9f06-f904-4315-99f1-5506f98c8868",
+    "perception_event": {
+      "trace_id": "756f9f06-f904-4315-99f1-5506f98c8868",
+      "vessel_type": "speedboat",
+      "confidence_score": 0.3922,
+      "dominant_freq_hz": 1127.0,
+      "anomaly_flag": false
+    },
+    "validation": {
+      "status": "ALLOW"
+    },
+    "intelligence_event": {
+      "trace_id": "756f9f06-f904-4315-99f1-5506f98c8868",
+      "vessel_type": "speedboat",
+      "confidence": 0.3922,
+      "risk_level": "HIGH",
+      "validation_status": "ALLOW"
+    },
+    "state_event": {
+      "trace_id": "756f9f06-f904-4315-99f1-5506f98c8868",
+      "vessel_type": "speedboat",
+      "risk_level": "HIGH",
+      "state": "ALERT",
+      "anomaly_flag": false
+    }
   },
-
-  "intelligence_event": {
-    "trace_id": "cargo-1",
-    "vessel_type": "cargo",
-    "confidence": 0.6396,
-    "risk_level": "MEDIUM",
-    "anomaly_flag": false,
-    "explanation": "Moderate confidence acoustic detection — medium risk",
-    "validation_status": "ALLOW"
+  {
+    "trace_id": "2466c4aa-fefe-433b-b97b-d39dd99f0568",
+    "perception_event": {
+      "trace_id": "2466c4aa-fefe-433b-b97b-d39dd99f0568",
+      "vessel_type": "submarine",
+      "confidence_score": 0.1734,
+      "dominant_freq_hz": 36.0,
+      "anomaly_flag": true
+    },
+    "validation": {
+      "status": "ALLOW"
+    },
+    "intelligence_event": {
+      "trace_id": "2466c4aa-fefe-433b-b97b-d39dd99f0568",
+      "vessel_type": "submarine",
+      "confidence": 0.1734,
+      "risk_level": "CRITICAL",
+      "validation_status": "ALLOW"
+    },
+    "state_event": {
+      "trace_id": "2466c4aa-fefe-433b-b97b-d39dd99f0568",
+      "vessel_type": "submarine",
+      "risk_level": "CRITICAL",
+      "state": "CRITICAL",
+      "anomaly_flag": true
+    }
   },
-
-  "state_event": {
-    "trace_id": "cargo-1",
-    "vessel_type": "cargo",
-    "risk_level": "MEDIUM",
-    "state": "WARNING",
-    "anomaly_flag": false,
-    "timestamp": "2026-05-04T10:16:58.543984+00:00",
-    "short_label": "Watch"
+  {
+    "trace_id": "fb381325-4292-4483-b66a-b55aa37a2fd2",
+    "perception_event": {
+      "trace_id": "fb381325-4292-4483-b66a-b55aa37a2fd2",
+      "vessel_type": "unknown",
+      "confidence_score": 0.2721,
+      "dominant_freq_hz": 44.0,
+      "anomaly_flag": false
+    },
+    "validation": {
+      "status": "ALLOW"
+    },
+    "intelligence_event": {
+      "trace_id": "fb381325-4292-4483-b66a-b55aa37a2fd2",
+      "vessel_type": "unknown",
+      "confidence": 0.20,
+      "risk_level": "HIGH",
+      "validation_status": "ALLOW"
+    },
+    "state_event": {
+      "trace_id": "fb381325-4292-4483-b66a-b55aa37a2fd2",
+      "vessel_type": "unknown",
+      "risk_level": "HIGH",
+      "state": "ALERT",
+      "anomaly_flag": false
+    }
+  },
+  {
+    "trace_id": "193f1e6c-d403-4bff-bbe4-9d4a7183d2ac",
+    "perception_event": {
+      "trace_id": "193f1e6c-d403-4bff-bbe4-9d4a7183d2ac",
+      "vessel_type": "unknown",
+      "confidence_score": 0.0201,
+      "dominant_freq_hz": 390.0,
+      "anomaly_flag": true
+    },
+    "validation": {
+      "status": "ALLOW"
+    },
+    "intelligence_event": {
+      "trace_id": "193f1e6c-d403-4bff-bbe4-9d4a7183d2ac",
+      "vessel_type": "unknown",
+      "confidence": 0.02,
+      "risk_level": "CRITICAL",
+      "validation_status": "ALLOW"
+    },
+    "state_event": {
+      "trace_id": "193f1e6c-d403-4bff-bbe4-9d4a7183d2ac",
+      "vessel_type": "unknown",
+      "risk_level": "CRITICAL",
+      "state": "CRITICAL",
+      "anomaly_flag": true
+    }
   }
-}
+]
