@@ -1,21 +1,47 @@
-PS C:\Users\Ankita prajapati\Downloads\OneDrive\Desktop\nicai_validation_layer> python send_to_raj.py
-
-🚀 STARTING EVENT TRANSFER...
-
-🚀 Sending Event 1: cargo-1
-Status Code: 200
-Response: {'trace_id': 'cargo-1', 'vessel_type': 'cargo', 'risk_level': 'MEDIUM', 'state': 'WARNING', 'anomaly_flag': False, 'timestamp': '2026-05-04T10:16:58.543984+00:00', 'short_label': 'Watch'}
-🚀 Sending Event 2: speedboat-1
-Status Code: 200
-Response: {'trace_id': 'speedboat-1', 'vessel_type': 'speedboat', 'risk_level': 'HIGH', 'state': 'ALERT', 'anomaly_flag': False, 'timestamp': '2026-05-04T10:17:00.393729+00:00', 'short_label': 'Concern'}
-🚀 Sending Event 3: submarine-1
-Status Code: 200
-Response: {'trace_id': 'submarine-1', 'vessel_type': 'submarine', 'risk_level': 'CRITICAL', 'state': 'CRITICAL', 'anomaly_flag': True, 'timestamp': '2026-05-04T10:17:02.681181+00:00', 'short_label': 'Threat'}
-🚀 Sending Event 4: low-1
-Status Code: 200
-Response: {'trace_id': 'low-1', 'vessel_type': 'unknown', 'risk_level': 'HIGH', 'state': 'ALERT', 'anomaly_flag': False, 'timestamp': '2026-05-04T10:17:04.654938+00:00', 'short_label': 'Concern'}
-🚀 Sending Event 5: anomaly-1
-Status Code: 200
-Response: {'trace_id': 'anomaly-1', 'vessel_type': 'unknown', 'risk_level': 'CRITICAL', 'state': 'CRITICAL', 'anomaly_flag': True, 'timestamp': '2026-05-04T10:17:06.522160+00:00', 'short_label': 'Threat'}
-
-✅ ALL EVENTS SENT SUCCESSFULLY
+[
+  {
+    "trace_id": "cargo-1",
+    "vessel_type": "cargo",
+    "risk_level": "MEDIUM",
+    "state": "WARNING",
+    "anomaly_flag": false,
+    "timestamp": "2026-05-04T10:16:58.543984+00:00",
+    "short_label": "Watch"
+  },
+  {
+    "trace_id": "speedboat-1",
+    "vessel_type": "speedboat",
+    "risk_level": "HIGH",
+    "state": "ALERT",
+    "anomaly_flag": false,
+    "timestamp": "2026-05-04T10:17:00.393729+00:00",
+    "short_label": "Concern"
+  },
+  {
+    "trace_id": "submarine-1",
+    "vessel_type": "submarine",
+    "risk_level": "CRITICAL",
+    "state": "CRITICAL",
+    "anomaly_flag": true,
+    "timestamp": "2026-05-04T10:17:02.681181+00:00",
+    "short_label": "Threat"
+  },
+  {
+    "trace_id": "low-1",
+    "vessel_type": "unknown",
+    "risk_level": "HIGH",
+    "state": "ALERT",
+    "anomaly_flag": false,
+    "timestamp": "2026-05-04T10:17:04.654938+00:00",
+    "short_label": "Concern"
+  },
+  {
+    "trace_id": "anomaly-1",
+    "vessel_type": "unknown",
+    "risk_level": "CRITICAL",
+    "state": "CRITICAL",
+    "anomaly_flag": true,
+    "timestamp": "2026-05-04T10:17:06.522160+00:00",
+    "short_label": "Threat"
+  }
+]
