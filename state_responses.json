@@ -6,7 +6,7 @@
     "state": "WARNING",
     "anomaly_flag": false,
     "timestamp": "2026-05-05T07:52:38.395111+00:00",
-    "short_label": "Watch"
+    "short_label": "Watch" 
   },
   {
     "trace_id": "756f9f06-f904-4315-99f1-5506f98c8868",
