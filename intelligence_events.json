@@ -7,7 +7,7 @@
 "anomaly_flag": false,
 "explanation": "Moderate confidence acoustic detection — medium risk",
 "validation_status": "ALLOW"
-},
+}, 
 {
 "trace_id": "756f9f06-f904-4315-99f1-5506f98c8868",
 "vessel_type": "speedboat",
