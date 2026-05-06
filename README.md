@@ -1,12 +1,18 @@
 # 🚀 SVACS End-to-End Pipeline Integration (NICAI + Sanskar)
 
+---
+
 ## 📌 Overview
 
-This project demonstrates a **fully integrated, real-time SVACS pipeline** connecting:
+This project demonstrates a **fully integrated, real-time SVACS pipeline** connecting multiple system layers:
 
-Perception Layer → NICAI → Validation → Sanskar (Intelligence) → State Engine
+**Signal Layer → NICAI → Validation → Sanskar (Intelligence) → State Engine**
 
-The system is **deterministic, traceable, and validated using real integration**, not mocks.
+The system is:
+
+* Deterministic
+* Fully traceable (via `trace_id`)
+* Integrated using real HTTP communication (no mocks)
 
 ---
 
@@ -18,14 +24,16 @@ Convert the system from:
 
 to:
 
-> “Proven end-to-end pipeline with real execution proof”
+> “A fully proven end-to-end execution pipeline with real trace validation”
 
 ---
 
 ## 🔗 System Architecture
 
-```
-Perception Event (Nupur)
+```id="flow-arch"
+Signal Layer (Nupur)
+        ↓
+Perception Event
         ↓
 NICAI Signal Builder
         ↓
@@ -76,11 +84,11 @@ https://your-ngrok-url.ngrok-free.app
 
 ### 3. Test API
 
-Open:
+Open Swagger UI:
 http://127.0.0.1:8000/docs
 
-Use:
-POST /nicai/classify
+Use endpoint:
+**POST /nicai/classify**
 
 ---
 
@@ -117,10 +125,13 @@ python send_to_raj.py
   "trace_id": "cargo-1",
   "perception_event": { ... },
   "nicai_signal": { ... },
-  "validation": { ... },
+  "validation": {
+    "status": "ALLOW"
+  },
   "intelligence_event": {
     "trace_id": "cargo-1",
-    "risk_level": "MEDIUM"
+    "risk_level": "MEDIUM",
+    "validation_status": "ALLOW"
   }
 }
 ```
@@ -130,26 +141,29 @@ python send_to_raj.py
 ## 🧠 Key Features
 
 * End-to-end traceability using `trace_id`
-* Deterministic intelligence logic
-* Anomaly override system
-* Real-time API integration
-* State Engine HTTP integration
+* Deterministic intelligence logic (no ML dependency)
+* Anomaly override handling
+* Real-time API processing
 * Validation status propagation
+* Live State Engine integration via HTTP
 
 ---
 
 ## 📁 Project Structure
 
-```
+```id="project-structure"
 ├── api_server.py
 ├── validator.py
 ├── sanskar_engine.py
 ├── send_to_raj.py
 ├── bucket_emitter.py
+├── telemetry_emitter.py
 ├── utils.py
-├── END_TO_END_TRACE_PROOF.json
-├── perception_logs.json
-├── state_responses.json
+├── logs/
+│   ├── perception_logs.json
+│   ├── intelligence_events.json
+│   ├── state_response.json
+│   └── END_TO_END_TRACE_PROOF.json
 ├── REVIEW_PACKET.md
 └── README.md
 ```
@@ -159,60 +173,77 @@ python send_to_raj.py
 ## 🔍 End-to-End Proof
 
 File:
-END_TO_END_TRACE_PROOF.json
+`logs/END_TO_END_TRACE_PROOF.json`
 
-Includes complete trace:
+Contains full pipeline trace:
 
 * perception_event
 * nicai_signal
-* validation
+* validation output
 * intelligence_event
 * state_event
+
+✔ Same `trace_id` preserved across all stages
+✔ Verified State Engine responses included
 
 ---
 
 ## 📊 Logs
 
-* perception_logs.json → real perception data
-* state_responses.json → state engine responses
-* trace proof → full pipeline verification
+* `logs/perception_logs.json` → Real perception events (15+)
+* `logs/intelligence_events.json` → Generated intelligence outputs
+* `logs/state_response.json` → State Engine responses
+* `logs/END_TO_END_TRACE_PROOF.json` → Full trace proof
 
 ---
 
 ## ✅ Validation Rules
 
-* Same `trace_id` across all layers
-* No schema modification
-* No mock data used
-* Real HTTP integration tested
+* Same `trace_id` must persist across all layers
+* No schema modification allowed
+* No mocked data used in final execution
+* Real HTTP integration must be verified
 
 ---
 
 ## 🧪 Testing
 
-Tested with 5 cases:
+Tested with 5 critical scenarios:
 
-* cargo
-* speedboat
-* submarine
-* low confidence
-* anomaly
+* Cargo vessel
+* Speedboat
+* Submarine
+* Low confidence detection
+* Anomalous signal
 
-All responses returned HTTP 200 ✅
+✔ All events returned HTTP 200
+✔ Correct state mapping verified
 
 ---
 
 ## 🎥 Demo
 
-(Attach demo video link here)
+(Add demo video link here)
 
 ---
 
 ## 🏁 Final Outcome
 
 ✔ Fully integrated pipeline
-✔ Real execution proof
-✔ Trace continuity verified
-✔ System ready for validation
+✔ Real execution proof achieved
+✔ End-to-end trace verified
+✔ State Engine integration confirmed
+
+---
+
+## 🚀 Final Status
+
+**SVACS Pipeline is now:**
+
+* Fully integrated
+* Deterministic
+* Traceable
+* Execution verified
+* Ready for BHIV testing protocol
 
 ---
