@@ -1,5 +1,7 @@
 # 🔷 NICAI – SVACS End-to-End Integration Review Packet
 
+---
+
 ## 📌 1. Entry Point
 
 The system is exposed via FastAPI:
@@ -7,7 +9,11 @@ The system is exposed via FastAPI:
 * Endpoint: `/nicai/classify`
 * Method: `POST`
 * Input: `perception_event`
-* Output: Full pipeline response including validation and intelligence
+* Output: Structured pipeline response including:
+
+  * `nicai_signal`
+  * `validation`
+  * `intelligence_event`
 
 ---
 
@@ -16,20 +22,24 @@ The system is exposed via FastAPI:
 ### 1. `api_server.py`
 
 * Accepts incoming `perception_event`
-* Converts to NICAI signal
+* Converts it into `nicai_signal`
 * Calls validation layer
 * Calls Sanskar intelligence engine
-* Returns structured pipeline output
+* Returns full structured pipeline output
+
+---
 
 ### 2. `validator.py`
 
-* Validates signal schema
-* Ensures required fields
+* Validates incoming signal schema
+* Ensures required fields are present
 * Outputs:
 
   * `status` (ALLOW / FLAG)
   * `reason`
   * `trace_id`
+
+---
 
 ### 3. `sanskar_engine.py`
 
@@ -39,14 +49,17 @@ The system is exposed via FastAPI:
   * Risk mapping
   * Anomaly detection
   * Explanation generation
-* Preserves `trace_id` (critical requirement)
+* Preserves `trace_id` (critical for traceability)
+* Adds `validation_status` from validation layer
 
 ---
 
 ## 📌 3. Live Flow (REAL Execution Chain)
 
 ```
-Nupur (Perception Layer)
+Nupur (Signal Layer)
+    ↓
+Perception Event
     ↓
 NICAI (Signal Builder)
     ↓
@@ -59,53 +72,56 @@ Raj (State Engine)
 State Event Output
 ```
 
-✔ Real perception events (15+) consumed
-✔ Events processed end-to-end
-✔ HTTP integration verified
+✔ Real perception events consumed (15+)
+✔ Events processed through full pipeline
+✔ HTTP integration verified with State Engine
 
 ---
 
 ## 📌 4. What Changed in This Task
 
-* Integrated NICAI with real perception_event stream
-* Fixed `trace_id` propagation issue
-* Added `validation_status` to intelligence_event
-* Connected to State Engine via HTTP
-* Generated full end-to-end trace proof
-* Removed reliance on dummy/test inputs
+* Integrated NICAI with real perception_event stream (no mocks)
+* Fixed `trace_id` propagation across all stages
+* Added `validation_status` in intelligence_event
+* Connected to State Engine via live HTTP endpoint
+* Executed full end-to-end pipeline using shared trace_ids
+* Generated verifiable trace proof
+* Eliminated dummy/test-only execution
 
 ---
 
 ## 📌 5. Failure Cases Observed
 
-| Issue                                    | Resolution                 |
-| ---------------------------------------- | -------------------------- |
-| Missing `trace_id` in intelligence_event | Fixed in Sanskar engine    |
-| Module import errors                     | Corrected file structure   |
-| ngrok command not recognized             | Used `.\ngrok`             |
-| Method Not Allowed error                 | Used POST instead of GET   |
-| URL not found                            | Correct endpoint path used |
+| Issue                                    | Resolution                      |
+| ---------------------------------------- | ------------------------------- |
+| Missing `trace_id` in intelligence_event | Fixed in Sanskar engine         |
+| Module import errors                     | Corrected file structure        |
+| ngrok command not recognized             | Used `.\ngrok` in PowerShell    |
+| Method Not Allowed error                 | Switched to correct HTTP method |
+| Endpoint not reachable                   | Verified correct ngrok URL      |
 
 ---
 
 ## 📌 6. Proof (Logs / Outputs)
 
-* 15 real perception events processed
-* Each event passed through:
+The following verified logs are included:
 
-  * validation
-  * intelligence generation
-  * state engine response
-* All responses returned HTTP 200
-* No pipeline failures observed
+* `logs/perception_logs.json` → Real perception events (15+)
+* `logs/intelligence_events.json` → Generated intelligence outputs
+* `logs/state_response.json` → State Engine responses
+* `logs/END_TO_END_TRACE_PROOF.json` → Full pipeline trace
+
+✔ All events returned HTTP 200
+✔ No execution failures observed
+✔ Consistent input-output mapping verified
 
 ---
 
 ## 📌 7. End-to-End Proof File
 
-File: `END_TO_END_TRACE_PROOF.json`
+File: `logs/END_TO_END_TRACE_PROOF.json`
 
-Contains full chain:
+Contains full trace chain for each case:
 
 * perception_event
 * nicai_signal
@@ -114,71 +130,68 @@ Contains full chain:
 * state_event
 
 ✔ Same `trace_id` preserved across all stages
-✔ Verified response from State Engine
+✔ Verified State Engine responses included
 
 ---
 
 ## 📌 8. Trace Continuity Verification
 
-* `trace_id` remains identical across:
+Trace continuity verified across:
 
-  * perception
-  * validation
-  * intelligence
-  * state
+* perception → validation → intelligence → state
 
-✔ No mutation observed
-✔ End-to-end trace consistency confirmed
+✔ No mutation of `trace_id`
+✔ End-to-end trace consistency maintained
 
 ---
 
-## 📌 9. Temporal Aggregation (Basic Implementation)
+## 📌 9. Temporal Aggregation (Basic Deterministic Logic)
 
-* Simple rule implemented:
+* Implemented simple rule:
 
   * 3 consecutive `MEDIUM` → escalated to `HIGH`
-* Deterministic logic used (no ML)
-* Verified with sample events
+* Deterministic (rule-based, no ML)
+* Verified using sample event sequence
 
 ---
 
 ## 📌 10. Bucket Logging & Verification
 
-* Events logged at:
-
-  * intelligence stage
-* Fields logged:
+* Intelligence events logged using bucket emitter
+* Logged fields:
 
   * input signal
   * output intelligence
   * trace_id
+  * timestamp
 
-✔ Logs verified for consistency
-✔ Matching input-output structure
+✔ Logging verified
+✔ Output structure consistent with input
+✔ No data loss observed
 
 ---
 
 ## 📌 11. Integration Status
 
-| Component          | Status      |
-| ------------------ | ----------- |
-| Nupur (Input)      | ✅ Connected |
-| NICAI              | ✅ Working   |
-| Validation         | ✅ Working   |
-| Sanskar            | ✅ Working   |
-| Raj (State Engine) | ✅ Connected |
-| End-to-End Flow    | ✅ Verified  |
+| Component            | Status      |
+| -------------------- | ----------- |
+| Nupur (Signal Layer) | ✅ Connected |
+| NICAI                | ✅ Working   |
+| Validation           | ✅ Working   |
+| Sanskar              | ✅ Working   |
+| Raj (State Engine)   | ✅ Connected |
+| End-to-End Flow      | ✅ Verified  |
 
 ---
 
 ## 📌 12. Final Outcome
 
-✔ System moved from isolated modules
-➡ to fully integrated real pipeline
+✔ System successfully transitioned from isolated modules
+➡ to fully integrated real-time pipeline
 
 ✔ Real data processed
-✔ End-to-end trace proven
-✔ State responses verified
+✔ End-to-end trace verified
+✔ State Engine responses validated
 
 ---
 
@@ -187,8 +200,9 @@ Contains full chain:
 **SVACS Pipeline is now:**
 
 * Fully integrated
+* Deterministic
 * Traceable
 * Execution verified
-* Ready for testing (BHIV protocol)
+* Ready for BHIV Universal Testing Protocol
 
 ---
