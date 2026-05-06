@@ -6,7 +6,7 @@ TELEMETRY_FILE = "telemetry_metrics.jsonl"
 
 def emit_telemetry(signal, result, layer="NICAI_PIPELINE"):
     """
-    Emit telemetry data for InsightFlow observability
+    Emit telemetry data for InsightFlow observability 
     """
 
     try:
