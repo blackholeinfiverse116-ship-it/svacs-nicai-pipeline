@@ -2,7 +2,7 @@ S C:\Users\Ankita prajapati\Downloads\svacs-demo-main\svacs-demo-main> Invoke-Re
 {
     "count":  15,
     "events":  [
-                   {
+                   { 
                        "trace_id":  "9d6dc7d6-d915-4738-a3bf-f20c78f6780b",
                        "vessel_type":  "cargo",
                        "confidence_score":  0.6396,
