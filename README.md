@@ -221,12 +221,6 @@ Tested with 5 critical scenarios:
 
 ---
 
-## 🎥 Demo
-
-(Add demo video link here)
-
----
-
 ## 🏁 Final Outcome
 
 ✔ Fully integrated pipeline
