@@ -5,7 +5,7 @@ from typing import Dict, Any
 from validator import validate_signal
 from sanskar_engine import analyze_signal
 
-app = FastAPI()
+app = FastAPI() 
 
 
 # -----------------------------
