@@ -3,7 +3,7 @@ from datetime import datetime
 
 BUCKET_FILE = "bucket_artifacts.jsonl"
 
-
+ 
 def emit_bucket_artifact(data):
 
     try:
