@@ -4,7 +4,7 @@ import time
 # ✅ Correct URL (Raj ka latest)
 URL = "https://7845-157-119-200-153.ngrok-free.app/ingest/intelligence"
 
-headers = {
+headers = { 
     "Content-Type": "application/json",
     "ngrok-skip-browser-warning": "true"
 }
