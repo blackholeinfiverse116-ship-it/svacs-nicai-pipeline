@@ -3,7 +3,7 @@
     "trace_id": "25d3f7c3-ba2a-4bc9-af02-dc3446b03189",
     "perception_event": {
       "trace_id": "25d3f7c3-ba2a-4bc9-af02-dc3446b03189",
-      "vessel_type": "cargo",
+      "vessel_type": "cargo", 
       "confidence_score": 0.6396,
       "dominant_freq_hz": 98.0,
       "anomaly_flag": false
